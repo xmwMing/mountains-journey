@@ -71,7 +71,8 @@ function loadAMapScript() {
 
     const script = document.createElement('script')
     script.type = 'text/javascript'
-    script.src = `https://webapi.amap.com/maps?v=2.0&key=4515b43a0f631ac743fc939ca74b5f0e`
+    const amapKey = import.meta.env.VITE_AMAP_KEY || '4515b43a0f631ac743fc939ca74b5f0e' // 默认密钥用于开发环境
+    script.src = `https://webapi.amap.com/maps?v=2.0&key=${amapKey}`
     script.onload = resolve
     script.onerror = reject
     document.head.appendChild(script)
