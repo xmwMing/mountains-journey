@@ -29,7 +29,7 @@
 
       <div class="detail-item">
         <span class="label">地理位置</span>
-        <span class="value">{{ peak.location.lat.toFixed(4) }}, {{ peak.location.lng.toFixed(4) }}</span>
+        <span class="value">{{ peak.province }}{{ peak.city }}</span>
       </div>
 
       <!-- 打卡信息 -->
